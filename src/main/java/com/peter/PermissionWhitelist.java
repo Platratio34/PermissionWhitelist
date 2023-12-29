@@ -24,6 +24,8 @@ public class PermissionWhitelist implements ModInitializer, ServerPlayConnection
 	
 	public static String permissionNode = "roboBouncer.canJoin";
 
+	public static boolean opBypass = false;
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -35,13 +37,18 @@ public class PermissionWhitelist implements ModInitializer, ServerPlayConnection
 
 
 		LOGGER.info("Loaded Permission Whitelist");
+		LOGGER.info(" __         ");
+		LOGGER.info("|__) \\    /");
+		LOGGER.info("|     \\/\\/");
+		LOGGER.info("           ");
 	}
 
 	@Override
 	public void onPlayReady(ServerPlayNetworkHandler handler, PacketSender sender, MinecraftServer server) {
-		if (handler.player.hasPermissionLevel(2)) { // If player is op-ed, ignore whitelisting
+		if (opBypass && handler.player.hasPermissionLevel(2)) { // If player is op-ed, ignore whitelisting
 			return;
 		}
+
 		LuckPerms api = LuckPermsProvider.get();
 
 		UserManager userManager = api.getUserManager();
