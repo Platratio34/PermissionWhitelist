@@ -5,21 +5,21 @@
 	"name": "Permission Whitelist",
 	"description": "A permission based whitelist server-side mode for use with LuckPerms or similar mods",
 	"authors": [
-		"Me!"
+		"Platratio34"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/permissionWhitelist/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.peter.ExampleMod"
+			"com.peter.PermissionWhitelist"
 		],
 		"client": [
-			"com.peter.ExampleModClient"
+			
 		]
 	},
 	"mixins": [
@@ -30,8 +30,8 @@
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.15.0",
-		"minecraft": "~1.20.4",
+		"fabricloader": ">=0.14.0",
+		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
 	},
