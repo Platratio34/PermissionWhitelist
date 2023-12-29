@@ -22,7 +22,7 @@ public class PermissionWhitelist implements ModInitializer, ServerPlayConnection
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger("permissionWhitelist");
 	
-	public static String permissionNode = "roboBouncer.canJoin";
+	public static String permissionNode = "robobouncer.join";
 
 	public static boolean opBypass = false;
 
