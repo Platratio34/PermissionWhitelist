@@ -1,4 +1,4 @@
-package main.java.com.peter.mixin;
+package com.peter.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;
